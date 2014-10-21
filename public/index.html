@@ -1,38 +1,4 @@
-<form class="form-horizontal" id="example-form">
-  <div class="form-group">
-    <label class="control-label" for="inputExample">Example</label>
-    <div class="controls">
-      <input type="text" id="inputExample" placeholder="Example">
-      <span data-alertid="example"></span>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="controls">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
- 
-<script>
-$(function(){
-  $("#example-form").submit(function() {
-    var inputVal = $("#inputExample").val();
-    $(document).trigger("clear-alert-id.example");
-    if (inputVal.length < 3) {
-      $(document).trigger("set-alert-id-example", [
-        {
-          message: "Please enter at least 3 characters",
-          priority: "error"
-        },
-        {
-          message: "This is an info alert",
-          priority: "info"
-        }
-      ]);
-    }
-  });
-});
-</script><html lang="en">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<base href="/">
